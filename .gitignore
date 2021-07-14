@@ -31,7 +31,6 @@ plugins/
 output/
 test/
 testnet/
-logs/
 .compile_cache
 .autogen
 
