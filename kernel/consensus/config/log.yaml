@@ -1,0 +1,10 @@
+# moudle name
+module: xchain
+# log filename
+filename: xchain
+# format
+fmt: logfmt
+# console status
+console: true
+# debug level
+level: debug
