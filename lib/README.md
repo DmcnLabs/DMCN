@@ -1,3 +1,3 @@
-# 区块链基础库
+#Blockchain foundation library
 
-提供业务无关的基础库实现，供各层组件调用。
+Provide business independent basic library implementation for components of all layers to call.

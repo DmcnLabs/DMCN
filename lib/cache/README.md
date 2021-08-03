@@ -1,4 +1,4 @@
-# cache库封禁
+# Cache Library
 
 https://github.com/patrickmn/go-cache
 https://github.com/allegro/bigcache
