@@ -273,8 +273,8 @@ func (pc *PluggableConsensus) getCurrentConsensusComponent() ConsensusInterface 
 	return pc.stepConsensus.tail()
 }
 
-// CompeteMaster 矿工检查当前自己是否需要挖矿
-// param: height仅为打印需要的标示，实际还是需要账本当前最高 的高度作为输入
+// CompeteMaster
+// param: height
 func (pc *PluggableConsensus) CompeteMaster(height int64) (bool, bool, error) {
 	con := pc.getCurrentConsensusComponent()
 	if con == nil {
@@ -284,7 +284,7 @@ func (pc *PluggableConsensus) CompeteMaster(height int64) (bool, bool, error) {
 	return con.CompeteMaster(height)
 }
 
-// CheckMinerMatch 调用具体实例的CheckMinerMatch()
+// CheckMinerMatch
 func (pc *PluggableConsensus) CheckMinerMatch(ctx xcontext.XContext, block cctx.BlockInterface) (bool, error) {
 	con := pc.getCurrentConsensusComponent()
 	if con == nil {
@@ -294,7 +294,7 @@ func (pc *PluggableConsensus) CheckMinerMatch(ctx xcontext.XContext, block cctx.
 	return con.CheckMinerMatch(ctx, block)
 }
 
-// ProcessBeforeMinerm调用具体实例的ProcessBeforeMiner()
+// ProcessBeforeMinerm
 func (pc *PluggableConsensus) ProcessBeforeMiner(timestamp int64) ([]byte, []byte, error) {
 	con := pc.getCurrentConsensusComponent()
 	if con == nil {
@@ -304,7 +304,7 @@ func (pc *PluggableConsensus) ProcessBeforeMiner(timestamp int64) ([]byte, []byt
 	return con.ProcessBeforeMiner(timestamp)
 }
 
-// CalculateBlock 矿工挖矿时共识需要做的工作, 如PoW时共识需要完成存在性证明
+// CalculateBlock
 func (pc *PluggableConsensus) CalculateBlock(block cctx.BlockInterface) error {
 	con := pc.getCurrentConsensusComponent()
 	if con == nil {
@@ -314,7 +314,7 @@ func (pc *PluggableConsensus) CalculateBlock(block cctx.BlockInterface) error {
 	return con.CalculateBlock(block)
 }
 
-// ProcessConfirmBlock 调用具体实例的ProcessConfirmBlock()
+// ProcessConfirmBlock
 func (pc *PluggableConsensus) ProcessConfirmBlock(block cctx.BlockInterface) error {
 	con := pc.getCurrentConsensusComponent()
 	if con == nil {
@@ -324,7 +324,7 @@ func (pc *PluggableConsensus) ProcessConfirmBlock(block cctx.BlockInterface) err
 	return con.ProcessConfirmBlock(block)
 }
 
-// GetConsensusStatus 调用具体实例的GetConsensusStatus()，返回接口
+// GetConsensusStatus
 func (pc *PluggableConsensus) GetConsensusStatus() (base.ConsensusStatus, error) {
 	con := pc.getCurrentConsensusComponent()
 	if con == nil {
@@ -336,7 +336,7 @@ func (pc *PluggableConsensus) GetConsensusStatus() (base.ConsensusStatus, error)
 
 /////////////////// stepConsensus //////////////////
 
-// stepConsensus 封装了可插拔共识需要的共识数组
+// stepConsensus
 type stepConsensus struct {
 	cons []ConsensusInterface
 	// mutex保护StepConsensus数据结构cons的读写操作
