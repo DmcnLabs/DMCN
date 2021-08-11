@@ -19,6 +19,6 @@ FindChain is the underlying solution for finddata networks with following highli
 ### Requirements
 
 * OS Support: Linux and Mac OS
-* Go 1.15.x or later
+* Go 1.14.x or later
 * GCC 4.8.x or later
 * Git    

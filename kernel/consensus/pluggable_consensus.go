@@ -424,7 +424,7 @@ func checkSameNameConsensus(hisMap map[int]def.ConsensusConfig, cfg *def.Consens
 		}
 		// 共识名称相同，注意: xpos和tdpos在name上都称为tdpos，但xpos的enableBFT!=nil
 		if (newConf.EnableBFT != nil && oldConf.EnableBFT != nil) || (newConf.EnableBFT == nil && oldConf.EnableBFT == nil) {
-			return true // 不允许同一共识名称的升级，如Tdpos不可以做配置升级，只能做配置回滚，如升级到xpos再升级回原来的tdpos
+			return true //
 		}
 	}
 	return false
