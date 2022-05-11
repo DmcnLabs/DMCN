@@ -1,8 +1,8 @@
-# FindChain
+# DMCN
 [![GolangCI](https://golangci.com/badges/github.com/golangci/golangci-lint.svg)](https://golangci.com)
 [![License](https://img.shields.io/github/license/xuperchain/xuperchain?style=flat-square)](/LICENSE)
 
-FindChain is the underlying solution for finddata networks with following highlight features:
+DMCN is the underlying solution for finddata networks with following highlight features:
 
 * **High Performance**
     * DPoS ensures quick consensus in a large scale network.
